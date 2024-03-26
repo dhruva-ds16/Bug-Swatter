@@ -1,0 +1,41 @@
+Array initialization
+
+var <VARNAME> [<LEN>]<ARRAY TYPE>
+
+Example:
+var a [6]int
+a[0] = 6
+i := a[0] //i = 6
+
+Array variable denotes the entire array and not the first element
+
+Arrays are strucures with indexed (fixed size) fields
+
+Array Literals:
+
+b := [2]string{"Hello", "World"}
+
+or we can allow the compiler to count the number of elements in the array and set the size accordingly like this,
+
+b := [...]string{"Hello", "World"} //here, the size is set to 2
+
+Slices:
+
+Slices are a more powerful and versatile variation of Arrays
+
+Slices have no specified length.
+
+Slice literals:
+
+letters := []string{"a","b","c"}
+
+A slice can be created using the built-in function called make
+
+func make([]<Type>, <length>, <Capacity>) //Here capacity is optional
+
+Example:
+var s []byte
+s = make([]byte, 5, 5) //Creates a slice with length 5 and max capacity of 5 with all zero values
+
+When capacity field is omitted, it defaults to the length
+
